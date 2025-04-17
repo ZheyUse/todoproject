@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Scale from 1.0 to 1.2 then to 0.8 (Bounce-Out effect) -->
+    <scale
+        android:duration="300"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="1.2"
+        android:toYScale="1.2"
+        android:pivotX="50%"
+        android:pivotY="50%" />
+
+    <scale
+        android:startOffset="300"
+    android:duration="300"
+    android:fromXScale="1.2"
+    android:fromYScale="1.2"
+    android:toXScale="0.8"
+    android:toYScale="0.8"
+    android:pivotX="50%"
+    android:pivotY="50%" />
+
+    <!-- Fade Out with a slight delay -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+</set>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SigninFragment">
+
+    <!-- FrameLayout containing views -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="39dp">
+
+        <!-- Logo ImageView -->
+        <ImageView
+            android:id="@+id/todotext"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:contentDescription="Logo"
+            android:paddingLeft="10dp"
+            android:src="@drawable/todotext" />
+
+        <!-- Background Wave Image -->
+        <ImageView
+            android:id="@+id/wave2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/wave2" />
+
+        <!-- Login Button Image -->
+        <ImageView
+            android:id="@+id/loginbtn"
+            android:layout_width="358.400dp"
+            android:layout_height="67.200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/loginbtn" />
+
+        <!--Username-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/usercard"
+            android:layout_width="358.400dp"
+            android:layout_height="67.200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-200dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:backgroundTint="@color/blue2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/input_username"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="2dp"
+
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance">
+
+
+            <EditText
+                    android:id="@+id/txtuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="start|center_vertical"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Password-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/passcard"
+            android:layout_width="358.400dp"
+            android:layout_height="67.200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-100dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+
+            android:backgroundTint="@color/blue2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/input_pass"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/white"
+                app:boxStrokeWidth="2dp"
+                app:passwordToggleEnabled="true"
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance">
+
+
+            <EditText
+                    android:id="@+id/txtpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="67.200dp"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="start|center_vertical"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <!-- Don't Have an Account? Text -->
+        <TextView
+            android:id="@+id/donthaveaccount"
+            android:layout_width="248dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="450dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="45dp"
+            android:text="Don't have an account?"
+            android:textAlignment="viewStart"
+            android:textColor="@color/blue1"
+            android:textSize="16sp" />
+
+        <!-- Forgot Password Text -->
+
+        <!-- Sign In Text (large and bold) -->
+        <TextView
+            android:id="@+id/forgotpass"
+            android:layout_width="406dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="450dp"
+            android:background="@android:color/transparent"
+            android:text="Forgot password?"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/blue1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/signInText"
+            android:layout_width="242dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-350dp"
+            android:background="@android:color/transparent"
+            android:text="SignIn"
+            android:textAlignment="center"
+            android:textColor="@color/blue1"
+            android:textSize="70sp"
+            android:textStyle="bold|italic" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue2" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
