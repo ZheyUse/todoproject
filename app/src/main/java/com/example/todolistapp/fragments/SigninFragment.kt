@@ -108,6 +108,7 @@ class SigninFragment : Fragment() {
 
             navControl.navigate(
                 R.id.action_signinFragment_to_signupFragment,
+
                 null,
                 navOptions
             )

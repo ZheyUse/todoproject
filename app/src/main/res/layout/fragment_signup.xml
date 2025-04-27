@@ -4,56 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".fragments.SignupFragment">
 
-    <!-- FrameLayout containing views -->
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <!-- Group top items inside a LinearLayout -->
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="36dp">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Logo ImageView -->
-
-        <!-- Background Wave Image -->
+        <!-- Logo -->
         <ImageView
             android:id="@+id/todotext"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
             android:contentDescription="Logo"
-            android:paddingLeft="10dp"
             android:src="@drawable/todotext" />
 
-        <ImageView
-            android:id="@+id/wave2"
-            android:layout_width="match_parent"
+        <!-- Sign Up Title -->
+        <TextView
+            android:id="@+id/signInText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:scaleType="fitXY"
-            android:src="@drawable/wave2" />
+            android:layout_marginTop="24dp"
+            android:text="SignUp"
+            android:textColor="@color/blue1"
+            android:textSize="48sp"
+            android:textStyle="bold|italic" />
 
-        <!-- Login Button Image -->
-        <ImageView
-            android:id="@+id/signupbtn"
-            android:layout_width="358.400dp"
-            android:layout_height="67.200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="150dp"
-            android:src="@drawable/signupbtn" />
-
-        <!--Username-->
+        <!-- Username Field -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/usercard1"
-            android:layout_width="358.400dp"
-            android:layout_height="67.200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/blue2"
             app:cardCornerRadius="8dp"
-            app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
             app:cardElevation="4dp">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -61,36 +54,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/input_username"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
-                app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
                 app:boxStrokeColor="@color/white"
-                app:boxStrokeWidth="2dp">
+                app:boxStrokeWidth="2dp"
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance">
 
                 <EditText
                     android:id="@+id/txtuser1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:ems="10"
-                    android:gravity="start|center_vertical"
                     android:inputType="text"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!--Password-->
+        <!-- Password Field -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/passcard1"
-            android:layout_width="358.400dp"
-            android:layout_height="67.200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/blue2"
-            app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
-
+            app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -98,39 +85,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/input_pass"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
-
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidth="2dp"
-                app:boxStrokeWidthFocused="0dp"
-
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance">
 
                 <EditText
                     android:id="@+id/txtpass1"
                     android:layout_width="match_parent"
-                    android:layout_height="67.200dp"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:ems="10"
-                    android:gravity="start|center_vertical"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!--Confirm Password-->
+        <!-- Confirm Password Field -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/conpasscard"
-            android:layout_width="358.400dp"
-            android:layout_height="67.200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="@color/blue2"
-            app:shapeAppearanceOverlay="@style/CustomShapeAppearance"
-
+            app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -138,64 +117,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/input_conpass"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 app:boxBackgroundMode="outline"
-
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidth="2dp"
-                app:boxStrokeWidthFocused="0dp"
-
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:shapeAppearanceOverlay="@style/CustomShapeAppearance">
 
                 <EditText
                     android:id="@+id/txtconpass"
                     android:layout_width="match_parent"
-                    android:layout_height="67.200dp"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:ems="10"
-                    android:gravity="start|center_vertical"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textColorHint="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Sign Up  -->
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/signInText"
-            android:layout_width="242dp"
-            android:layout_height="125dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-350dp"
-            android:background="@android:color/transparent"
-            android:text="SignUp"
-            android:textAlignment="center"
-            android:textColor="@color/blue1"
-            android:textSize="70sp"
-            android:textStyle="bold|italic" />
+    <!-- Sign Up Button -->
+    <ImageView
+        android:id="@+id/signupbtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/signupbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topSection" />
 
-        <TextView
-            android:id="@+id/haveanaccount"
-            android:layout_width="406dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="220dp"
-            android:background="@android:color/transparent"
-            android:text="Have an account?"
-            android:textAlignment="center"
-            android:textColor="@color/blue1"
-            android:textSize="16sp" />
-        <ProgressBar
-            android:id="@+id/progressBar1"
-            android:layout_marginTop="300dp"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminateTint="@color/blue2" />
+    <!-- Already Have an Account -->
 
-    </FrameLayout>
+    <!-- Wave Background at Bottom -->
+    <TextView
+        android:id="@+id/haveanaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="160dp"
+        android:text="Have an account?"
+        android:textColor="@color/blue1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupbtn" />
+
+    <ImageView
+        android:id="@+id/wave2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wave2"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blue2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wave2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
